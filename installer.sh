@@ -12,6 +12,5 @@ pkgurl=`echo $pkginfo | grep download_url | head -n 1 | cut -d '"' -f 8`
 wget $pkgurl
 tar -xf $pkgname -C /opt
 cp ./waterfox.desktop /usr/share/applications/waterfox.desktop
-cp ./waterfox.svg /usr/share/icons/waterfox.svg
 ln -s /opt/waterfox/waterfox /usr/bin/waterfox
-rm ./*.tar.*
+rm $pkgname
